@@ -1,0 +1,100 @@
+<!-- add-new-games.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/GameVaultLogo.ico" type="image/x-icon">
+    <script type="module" src="script.js"></script>
+    <script type="module" src="auth.js"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./img/GameVaultLogo.png" alt="Game Vault Logo" class="logo">
+    </div>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Games</a>
+            <a id="profile-link" href="profile.html">Profile</a>
+            <a href="users.html">User List</a>
+        </div>
+        <div id="user-info">
+            <span id="user-email"></span>
+            <button id="logout" style="display:none;">Log Out</button>
+            <button id="login" style="display:inline;">Log In with Google</button>
+        </div>
+    </nav>
+
+    <main>
+        <form id="add-game-form">
+            <h3>Add New Game</h3>
+    
+            <div class="form-group">
+                <label for="game-title">Game Title:</label>
+                <input type="text" id="game-title" placeholder="Enter game title" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="cover-art">Cover Art URL:</label>
+                <input type="url" id="cover-art" placeholder="Enter cover art URL">
+            </div>
+    
+            <div class="form-group">
+                <label for="developer">Developer:</label>
+                <input type="text" id="developer" placeholder="Enter developer name">
+            </div>
+    
+            <div class="form-group">
+                <label for="developer-link">Developer Link:</label>
+                <input type="url" id="developer-link" placeholder="Enter developer link">
+            </div>
+    
+            <div class="form-group">
+                <label for="publisher">Publisher:</label>
+                <input type="text" id="publisher" placeholder="Enter publisher name">
+            </div>
+    
+            <div class="form-group">
+                <label for="publisher-link">Publisher Link:</label>
+                <input type="url" id="publisher-link" placeholder="Enter publisher link">
+            </div>
+    
+            <div class="form-group">
+                <label for="platform">Platform:</label>
+                <select id="platform" required>
+                    <option value="" disabled selected>Select a platform</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="platform-link">Platform Link:</label>
+                <input type="url" id="platform-link" placeholder="Enter platform link">
+            </div>
+    
+            <div class="form-group">
+                <label for="year">Release Year:</label>
+                <input type="number" id="year" placeholder="Enter release year">
+            </div>
+    
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" placeholder="Enter genre">
+            </div>
+    
+            <div class="form-group">
+                <label for="cover-art-available">Cover Art Available:</label>
+                <select id="cover-art-available" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            
+            <button type="submit">Add Game</button>
+        </form>
+    </main>    
+</body>
+</html>

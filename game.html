@@ -1,0 +1,88 @@
+<!-- game.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/GameVaultLogo.ico" type="image/x-icon">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./img/GameVaultLogo.png" alt="Game Vault Logo" class="logo">
+    </div>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Games</a>
+            <a id="profile-link" href="profile.html">Profile</a>
+            <a href="users.html">User List</a>
+        </div>
+        <div id="user-info">
+            <span id="user-email"></span>
+            <button id="logout" style="display:none;">Log Out</button>
+            <button id="login" style="display:inline;">Log In with Google</button>
+        </div>
+    </nav>
+
+    <div id="admin-controls" style="display:none;">
+        <button id="add-game-button">Add Game</button>
+    </div>
+
+    <div class="game-details">
+        <h1 id="game-title">Loading...</h1>
+        <img id="cover-art" src="" alt="Cover art" class="cover-art" style="display: none;">
+        <p id="year" style="display: none;"></p>
+        <p id="dev" style="display: none;"></p>
+        <p id="publisher" style="display: none;"></p>
+        <p id="platform" style="display: none;"></p>
+        <p id="genre" style="display: none;"></p>
+        <p id="objectID" style="display: none;"></p>
+        <div id="game-link-container" style="display: none;"></div>
+    </div>
+
+    <div class="game-actions">
+        <h2>Manage Game</h2>
+        <div class="buttons-and-condition">
+            <div class="buttons">
+                <button id="toggle-collection-btn">Add/Remove from Collection</button>
+                <button id="toggle-wishlist-btn">Add/Remove from Wishlist</button>
+            </div>
+            <div class="condition-selector">
+                <label for="condition-dropdown" class="visually-hidden">Condition:</label>
+                <select id="condition-dropdown" class="condition-dropdown">
+                    <option value="" disabled selected>Select a condition</option>
+                    <option value="New">New - Sealed and never used</option>
+                    <option value="Complete">Complete - Includes box and manual</option>
+                    <option value="No Manual">No Manual - Missing the manual</option>
+                    <option value="Loose">Loose - Cartridge/disc only</option>
+                </select>
+            </div>            
+        </div>
+    </div>
+
+    <div class="game-reviews">
+        <h2>Write a Review</h2>
+        <form id="review-form">
+            <label for="review-rating">Rating (1-5):</label>
+            <div id="custom-rating" class="custom-rating">
+                <span class="rating-stars" data-rating="0">
+                    <img src="./img/star.png" alt="Star 1" class="star empty" data-value="1" />
+                    <img src="./img/star.png" alt="Star 2" class="star empty" data-value="2" />
+                    <img src="./img/star.png" alt="Star 3" class="star empty" data-value="3" />
+                    <img src="./img/star.png" alt="Star 4" class="star empty" data-value="4" />
+                    <img src="./img/star.png" alt="Star 5" class="star empty" data-value="5" />
+                </span>
+                <input type="hidden" id="review-rating" name="review-rating" value="0" required />
+            </div>
+            <label for="review-content">Your Review:</label>
+            <textarea id="review-content" rows="4" placeholder="Write your review here" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+        <h2>Reviews</h2>
+        <div id="reviews-list">Loading reviews...</div>
+    </div>
+</body>
+</html>

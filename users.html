@@ -1,0 +1,42 @@
+<!-- users.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/GameVaultLogo.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./img/GameVaultLogo.png" alt="Game Vault Logo" class="logo">
+    </div>
+    <h1>User List</h1>
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Games</a>
+            <a id="profile-link" href="#">Profile</a>
+            <a href="users.html">User List</a>
+        </div>
+        <div id="user-info">
+            <span id="user-email"></span>
+            <button id="logout" style="display:none;">Log Out</button>
+            <button id="login" style="display:inline;">Log In with Google</button>
+        </div>
+    </nav>
+    <div class="search-filter-container">
+        <form id="searchbox">
+            <input type="search" id="search-bar" placeholder="Search for users" />
+        </form>
+    </div>
+    <div>
+        <ul id="user-list" class="user-list">
+        </ul>
+    </div>
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="usersScript.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

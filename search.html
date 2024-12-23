@@ -1,0 +1,68 @@
+<!-- search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Vault - Search</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/GameVaultLogo.ico" type="image/x-icon">
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="algoliaScript.js"></script>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./img/GameVaultLogo.png" alt="Game Vault Logo" class="logo">
+    </div>
+    <h1>Search Games</h1>
+    
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Games</a>
+            <a id="profile-link" href="profile.html">Profile</a>
+            <a href="users.html">User List</a>
+        </div>
+        <div id="user-info">
+            <span id="user-email"></span>
+            <button id="logout" style="display:none;">Log Out</button>
+            <button id="login" style="display:inline;">Log In with Google</button>
+        </div>
+    </nav>
+    <div id="searchbox" placeholder="Search for games"></div>
+
+<div class="filters-header">
+    <h3>Filters</h3>
+</div>
+
+<div class="filter-container">
+    <label for="platform-filter">Platform:</label>
+    <select id="platform-filter">
+        <option value="">All</option>
+    </select>
+    <label for="year-filter">Release Year:</label>
+    <select id="year-filter">
+        <option value="">All</option>
+    </select>
+    <label for="cover-art-filter">Cover Art:</label>
+    <select id="cover-art-filter">
+        <option value="">All</option>
+        <option value="Yes">Available</option>
+        <option value="No">Unavailable</option>
+    </select>
+    <button id="apply-filters">Apply Filters</button>
+</div>
+
+<div class="main-content">
+    <div class="results-section">
+        <ol id="hits" class="ais-Hits-list"></ol>
+        <div id="pagination"></div>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch/dist/algoliasearch-lite.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+</body>
+</html>

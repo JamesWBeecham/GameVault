@@ -1,0 +1,63 @@
+<!-- profile.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/GameVaultLogo.ico" type="image/x-icon">
+    <script type="module" src="auth.js"></script> 
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const pathSegments = window.location.pathname.split('/');
+        const username = urlParams.get('user') || pathSegments[pathSegments.length - 1];
+        window.profileUsername = username;
+    </script>
+    <script type="module" src="script.js"></script> 
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./img/GameVaultLogo.png" alt="Game Vault Logo" class="logo">
+    </div>
+    <h1>User Profile</h1>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Games</a>
+            <a id="profile-link" href="profile.html">Profile</a>
+            <a href="users.html">User List</a>
+        </div>
+        <div id="user-info">
+            <span id="user-email"></span>
+            <button id="logout" style="display:none;">Log Out</button>
+            <button id="login" style="display:inline;">Log In with Google</button>
+        </div>
+    </nav>
+
+    <h2 id="profile-header">
+        <span id="profileDisplayName">User's</span> Profile
+        <button id="share-profile-button">Share Profile</button>
+        <span id="share-status">Copied!</span>
+    </h2>
+    
+    <section id="collection-section">
+        <h3>Collection</h3>
+        <ul id="collectionList" class="ais-Hits-list">
+        </ul>
+    </section>
+    
+    <section id="wishlist-section">
+        <h3>Wishlist</h3>
+        <ul id="wishlistList" class="ais-Hits-list">
+        </ul>
+    </section>
+    
+    <section id="reviews-section">
+        <h3>Reviews</h3>
+        <ul id="reviewsList" class="ais-Hits-list">
+        </ul>
+    </section>
+</body>
+</html>

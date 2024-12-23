@@ -1,0 +1,42 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Vault - Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./img/GameVaultLogo.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="logo-container">
+        <img src="./img/GameVaultLogo.png" alt="Game Vault Logo" class="logo">
+    </div>
+    <h1>Welcome to Game Vault!</h1>
+    
+    <nav>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Home</a>
+            <a href="search.html">Search Games</a>
+            <a id="profile-link" href="/~jwbeecha/SeniorProject/GameVault/profile.html">Profile</a>
+            <a href="users.html">User List</a>
+        </div>
+        
+        <div id="user-info">
+            <span id="user-email"></span>
+            <button id="logout" style="display:none;">Log Out</button>
+            <button id="login" style="display:inline;">Log In with Google</button>
+        </div>
+    </nav>
+
+    <div class="content">
+        <h2>About This Project</h2>
+        <p>Game Vault is a web application that allows users to track their video game collections. You can add games to your collection, add games to your wishlist, view details about your games, and even read and write reviews.</p>
+        <p>The project includes a comprehensive database of games, with cover art, descriptions, and links to their Wikipedia pages. Enjoy organizing and managing your gaming library with ease!</p>
+        <p>Get started by going to the search page and looking for your favorite games or viewing your friend's collection.</p>
+    </div>
+
+    <script type="module" src="auth.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+</html>
